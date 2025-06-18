@@ -34,6 +34,6 @@ public class SaleItemService {
     }
 
     public List<SaleItem> getItemByProductId(Long productId) {
-        return saleItemRepository.findByProductId(productId);
+        return saleItemRepository.findByProduct_Id(productId);
     }
 }

@@ -1,5 +1,7 @@
 package com.cyngofokglobalSalesManagementSystem.dto;
 
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -19,6 +21,8 @@ public class SaleItemDTO {
     private Long id;
 
     @NotNull(message = "Product ID is required")
+    @ManyToOne
+    @JoinColumn(name = "product_id")
     private Long productId;
 
     @Min(value = 1, message = "Quantity must be at least 1")
